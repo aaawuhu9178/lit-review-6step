@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this workflow in research or teaching, please cite it as below."
+title: "lit-review-6step: a six-stage literature review pipeline as agent skills"
+abstract: >-
+  A six-stage literature review workflow (question, search strategy, search and
+  screening, close reading and extraction, synthesis and drafting, final editing)
+  packaged as Agent Skills, with entry points at any stage, stage gates, and a
+  seven-section survey outline for the "new technology on an old problem" pattern.
+authors:
+  - family-names: "武"
+    given-names: "文政"
+version: "1.0.0"
+date-released: "2026-11-09"
+license: MIT
+repository-code: "https://github.com/aaawuhu9178/lit-review-6step"
+keywords:
+  - literature review
+  - survey writing
+  - agent skills
+  - research workflow
+  - systematic review
+type: software

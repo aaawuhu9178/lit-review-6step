@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0 — 2026-11-09
+
+- 新增 `commands/` 四个入口命令：`lit-review`、`lit-review-s2`、`survey-outline`、`survey-abstract`
+- 新增 `skills/shared/evidence-norms.md`：证据与语言规范，三个 skill 共用
+- 新增 `scripts/check.mjs`：七项仓库自检（catalog、frontmatter、引用路径、README 覆盖、个人路径、密钥、编码）
+- 新增 `catalog/skills.json`：skill 目录的单一事实源
+- 每个 skill 增加 `VALIDATION.md`：写明验证过什么、没验证什么
+- 安装脚本增加命令复制（`.dsh/commands/`）
+
 ## 1.0.0 — 2026-11-09
 
 首个公开版本。

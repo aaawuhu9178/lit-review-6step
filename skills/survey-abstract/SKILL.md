@@ -7,6 +7,8 @@ description: "Use when drafting, revising, or auditing the abstract of an academ
 
 综述摘要不是研究论文摘要的变体。它要在 200–300 词（医学/药物 100–150 词）内完成五件事：**钩子 → 身份 → 地图 → 证据 → 展望**。顺序固定，功能不能混。
 
+数字与引用遵守 `../shared/evidence-norms.md`：摘要里每个数字都要能回到正文。
+
 ## 五段结构
 
 | 段 | 功能 | 长度 | 是否必写 |

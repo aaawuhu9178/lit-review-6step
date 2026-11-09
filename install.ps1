@@ -28,7 +28,7 @@ $skillsDir = Join-Path $target ".dsh\skills"
 Write-Host "目标项目: $target"
 New-Item -ItemType Directory -Force -Path $skillsDir | Out-Null
 
-foreach ($name in @("lit-review-6step", "survey-writing", "survey-abstract")) {
+foreach ($name in @("lit-review-6step", "survey-writing", "survey-abstract", "shared")) {
     $src = Join-Path $root "skills\$name"
     if (-not (Test-Path -LiteralPath $src)) { throw "缺少 skills\$name，仓库不完整" }
     $dst = Join-Path $skillsDir $name
@@ -46,6 +46,14 @@ if (Test-Path -LiteralPath $tplSrc) {
         Copy-Item -LiteralPath $tplSrc -Destination $tplDst -Recurse -Force
         Write-Host "  已安装模板: 文献综述项目模板/"
     }
+}
+
+$cmdSrc = Join-Path $root "commands"
+$cmdDst = Join-Path $target ".dsh\commands"
+if (Test-Path -LiteralPath $cmdSrc) {
+    New-Item -ItemType Directory -Force -Path $cmdDst | Out-Null
+    Copy-Item -Path (Join-Path $cmdSrc "*") -Destination $cmdDst -Force
+    Write-Host "  已安装命令: .dsh/commands/（Claude Code 用户复制到 .claude/commands/）"
 }
 
 if ($WithDeps) {

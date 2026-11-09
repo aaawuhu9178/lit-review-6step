@@ -7,6 +7,8 @@ description: "Use when planning, outlining, drafting, or revising the body of an
 
 综述是一篇有论点的学术论文，不是文献的中立堆叠。它必须交付三样东西：一张可导航的地图、一套能解释现有工作的分类坐标、一个由地图自然长出的研究议程。
 
+**证据与语言以 `../shared/evidence-norms.md` 为准**：引用必须能回溯到候选表，数字必须有出处，拿不准写“待核”。
+
 **硬规则：taxonomy 没有填满、核心论点不能用一句话说清之前，不写正文。** 边写边分类，结构一定漂移。
 
 ## 先判断用户在哪一步

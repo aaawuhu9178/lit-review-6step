@@ -24,6 +24,9 @@
 | `skills/lit-review-6step/` | 六步编排器：入口选择、门禁、AMiner 通道、结构模式与提纲模板 |
 | `skills/survey-writing/` | 综述正文：物种选择、taxonomy、图表规划、Gate A/B/C |
 | `skills/survey-abstract/` | 摘要五段式（钩子 → 定位 → 框架 → 证据 → 展望） |
+| `skills/shared/evidence-norms.md` | 三个 skill 共用的证据与语言规范 |
+| `commands/` | 四个入口命令：`lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` |
+| `scripts/check.mjs` | 仓库自检：frontmatter、引用路径、个人路径、密钥 |
 | `templates/文献综述项目模板/` | 六步目录 + 四张表 + 提纲 / 摘要模板 |
 | `docs/workflow.md` | 流程说明、入口契约、结构模式 |
 
@@ -67,6 +70,14 @@ cd lit-review-6step
 
 Claude Code 用户把目标目录换成 `.claude/skills` 即可（`-Target` 指向项目根，脚本固定写到 `.dsh/skills`，可自行改一行）。
 
+## 自检
+
+```powershell
+node scripts/check.mjs
+```
+
+检查 7 项：catalog 与目录一致、frontmatter 完整、引用路径存在、README 覆盖、无个人路径、无密钥、install.ps1 编码。每个 skill 另有一份 `VALIDATION.md`，写清验证过什么、**没验证什么**。
+
 ## 依赖
 
 | 依赖 | 必须 | 用途 | 获取方式 |
@@ -92,6 +103,17 @@ Claude Code 用户把目标目录换成 `.claude/skills` 即可（`-Target` 指�
 | S4 | 筛选后的文献清单 | S1–S3 | PRISMA 计数（S6） |
 | S5 | 提取表 / 详细笔记 | S1–S4 | 引用可回溯性（S6） |
 | S6 | 已有初稿 | S1–S5 | 先结构诊断，再润色 |
+
+## 命令入口
+
+| 命令 | 用途 |
+|---|---|
+| `/lit-review` | 从 S1 开始，第一步是选题 |
+| `/lit-review-s2` | 已有题目，从 S2 检索策略开始 |
+| `/survey-outline` | 只出「新技术 × 旧问题」提纲，不写正文 |
+| `/survey-abstract` | 只写或改摘要 |
+
+Claude Code 把 `commands/*.md` 放到 `.claude/commands/`，之后可直接输入 `/lit-review-s2 题目：……`。DSH 用户说“读 `commands/lit-review-s2.md` 并执行”，安装脚本也会把它复制到 `.dsh/commands/`。
 
 ## 六步
 
@@ -127,8 +149,12 @@ lit-review-6step/
 ├─ skills/
 │  ├─ lit-review-6step/     # 编排器
 │  ├─ survey-writing/       # 正文写作
-│  └─ survey-abstract/      # 摘要
+│  ├─ survey-abstract/      # 摘要
+│  └─ shared/evidence-norms.md
+├─ commands/                # 四个入口
 ├─ templates/文献综述项目模板/
+├─ catalog/skills.json
+├─ scripts/check.mjs
 ├─ docs/workflow.md
 ├─ install.ps1
 ├─ install.sh

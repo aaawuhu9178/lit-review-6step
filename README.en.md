@@ -26,6 +26,9 @@ Author: 武文政 (Wu Wenzheng) · [@aaawuhu9178](https://github.com/aaawuhu9178
 | `skills/lit-review-6step/` | Six-stage orchestrator: entry points, gates, AMiner channel, structure patterns and outline templates |
 | `skills/survey-writing/` | Survey body: choosing the review species, taxonomy, figures, Gates A/B/C |
 | `skills/survey-abstract/` | Five-part abstract (hook → positioning → framework → evidence → outlook) |
+| `skills/shared/evidence-norms.md` | Shared evidence and language rules for all three skills |
+| `commands/` | Four entry commands: `lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` |
+| `scripts/check.mjs` | Repo self-check: frontmatter, referenced paths, personal paths, secrets |
 | `templates/文献综述项目模板/` | Six-stage folder layout, four tables, outline and abstract templates |
 | `docs/workflow.md` | Workflow overview, entry contracts, structure pattern |
 
@@ -69,6 +72,14 @@ After installation the target project contains:
 
 Claude Code users can point the installer at a project and change `.dsh/skills` to `.claude/skills` (one line in the script).
 
+## Self-check
+
+```powershell
+node scripts/check.mjs
+```
+
+Seven checks: catalog matches directories, frontmatter complete, referenced paths exist, README covers every skill, no personal paths, no secrets, `install.ps1` encoding. Each skill also ships a `VALIDATION.md` stating what was tested and, explicitly, what was not.
+
 ## Requirements
 
 | Dependency | Required | Used for | How to get it |
@@ -94,6 +105,17 @@ You do not have to start at S1. Tell the agent what you already have:
 | S4 | A screened reading list | S1–S3 | PRISMA counts (S6) |
 | S5 | An extraction table / detailed notes | S1–S4 | Citation traceability (checked at S6) |
 | S6 | A draft | S1–S5 | Structural diagnosis before polishing |
+
+## Commands
+
+| Command | Purpose |
+|---|---|
+| `/lit-review` | Start at S1, from a broad direction |
+| `/lit-review-s2` | Start at S2 with a fixed topic |
+| `/survey-outline` | Produce the "new technology × old problem" outline only |
+| `/survey-abstract` | Write or revise the abstract only |
+
+In Claude Code, copy `commands/*.md` into `.claude/commands/` and run `/lit-review-s2 topic: ...`. In DSH, say "execute `commands/lit-review-s2.md`"; the installer also copies them to `.dsh/commands/`.
 
 ## The six stages
 
@@ -129,8 +151,12 @@ lit-review-6step/
 ├─ skills/
 │  ├─ lit-review-6step/     # orchestrator
 │  ├─ survey-writing/       # body writing
-│  └─ survey-abstract/      # abstract
+│  ├─ survey-abstract/      # abstract
+│  └─ shared/evidence-norms.md
+├─ commands/                # four entry commands
 ├─ templates/文献综述项目模板/
+├─ catalog/skills.json
+├─ scripts/check.mjs
 ├─ docs/workflow.md
 ├─ install.ps1
 ├─ install.sh

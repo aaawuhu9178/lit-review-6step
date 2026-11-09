@@ -14,7 +14,7 @@ mkdir -p "$SKILLS"
 
 echo "目标项目: $TARGET"
 
-for name in lit-review-6step survey-writing survey-abstract; do
+for name in lit-review-6step survey-writing survey-abstract shared; do
   if [ ! -d "$ROOT/skills/$name" ]; then
     echo "缺少 skills/$name，仓库不完整" >&2
     exit 1
@@ -33,6 +33,12 @@ if [ -d "$TPL_SRC" ]; then
     cp -R "$TPL_SRC" "$TPL_DST"
     echo "  已安装模板: 文献综述项目模板/"
   fi
+fi
+
+if [ -d "$ROOT/commands" ]; then
+  mkdir -p "$TARGET/.dsh/commands"
+  cp "$ROOT"/commands/*.md "$TARGET/.dsh/commands/"
+  echo "  已安装命令: .dsh/commands/"
 fi
 
 if [ "$WITH_DEPS" = "--with-deps" ] || [ "$WITH_DEPS" = "-d" ]; then

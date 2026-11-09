@@ -21,6 +21,7 @@ metadata:
 | academic-paper | `.dsh/skills/academic-paper/SKILL.md` | 第 6 步引用与格式核查 |
 | survey-writing | `.dsh/skills/survey-writing/SKILL.md` | 第 5 步正文结构、taxonomy、图表 |
 | survey-abstract | `.dsh/skills/survey-abstract/SKILL.md` | 第 6 步摘要五段式 |
+| 证据规范 | `../shared/evidence-norms.md` | 全流程引用、数字与来源标注 |
 
 ## 开工前：预检
 

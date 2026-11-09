@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "name": "lit-review-6step",
+  "version": "1.1.0",
+  "updated": "2026-11-09",
+  "skills": [
+    {
+      "name": "lit-review-6step",
+      "path": "skills/lit-review-6step",
+      "stage": "orchestrator",
+      "entry": "S1-S6",
+      "requires": [
+        "literature-review-skill",
+        "literature-review-skills",
+        "survey-writing",
+        "survey-abstract"
+      ],
+      "optional": [
+        "sr-screener",
+        "academic-paper"
+      ]
+    },
+    {
+      "name": "survey-writing",
+      "path": "skills/survey-writing",
+      "stage": "S5",
+      "provides": ["taxonomy", "figure-plan", "gates-a-b-c"]
+    },
+    {
+      "name": "survey-abstract",
+      "path": "skills/survey-abstract",
+      "stage": "S6",
+      "provides": ["five-part-abstract"]
+    }
+  ],
+  "shared": [
+    "skills/shared/evidence-norms.md"
+  ],
+  "commands": [
+    "commands/lit-review.md",
+    "commands/lit-review-s2.md",
+    "commands/survey-outline.md",
+    "commands/survey-abstract.md"
+  ]
+}

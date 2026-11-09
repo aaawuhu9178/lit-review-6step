@@ -1,5 +1,7 @@
 # lit-review-6step
 
+[English](README.en.md) | **简体中文**
+
 把文献综述拆成六个可验收的阶段：**选题 → 检索策略 → 检索与初筛 → 精读提取 → 综合写作 → 统稿**。每个阶段有固定产物和门禁，支持从任意阶段进入；成稿按「新技术 × 旧问题」的七节骨架写。
 
 一套 [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) 格式的技能包，纯 Markdown，无运行时依赖。

@@ -6,7 +6,7 @@ Break a literature review into six checkable stages: **question → search strat
 
 A skill pack in [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) format. Plain Markdown, no runtime dependencies.
 
-Author: 武文政 (Wenzheng Wu) · [@aaawuhu9178](https://github.com/aaawuhu9178)
+Author: 武文政 (Wu Wenzheng) · [@aaawuhu9178](https://github.com/aaawuhu9178)
 
 > The skill instructions themselves are currently written in Chinese. The workflow is usable by non-Chinese readers, but expect Chinese text inside `SKILL.md` files.
 

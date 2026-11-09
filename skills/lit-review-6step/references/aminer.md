@@ -77,6 +77,8 @@ node .dsh/skills/lit-review-6step/scripts/aminer_health.mjs
 - `MISSING` → 没配 key
 - `NETWORK` → 网关不可达，稍后重试或降级
 
-## 已知状态（2026-11-09）
+## 排障
 
-当前 `AMINER_API_KEY` 的 JWT `exp` 为 2026-10-24，已过期，网关返回 `Invalid Token`。在换新 token 之前，第 3 步的 AMiner 通道不可用，只能用降级路径。
+- 先跑健康检查：`EXPIRED` / `INVALID` 换 token，`MISSING` 是没配。
+- 网关返回 `Invalid Token`（HTTP 500 / code 40308）是 token 问题，不是网络问题。
+- 没有 token 时不要卡住流程，按主文件的降级路径走手工检索；候选表字段不变。

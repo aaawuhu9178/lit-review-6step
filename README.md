@@ -6,7 +6,7 @@
 
 一套 [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) 格式的技能包，纯 Markdown，无运行时依赖。
 
-作者：武文政 · [@aaawuhu9178](https://github.com/aaawuhu9178)
+作者：武文政 · [@wakawaka66614](https://github.com/wakawaka66614)
 
 ## 它解决什么
 
@@ -37,7 +37,7 @@
 **Windows**
 
 ```powershell
-git clone https://github.com/aaawuhu9178/lit-review-6step.git
+git clone https://github.com/wakawaka66614/lit-review-6step.git
 cd lit-review-6step
 .\install.ps1 -Target C:\path\to\your\project -WithDeps
 ```
@@ -51,7 +51,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Target C:\path\to\your\p
 **macOS / Linux**
 
 ```bash
-git clone https://github.com/aaawuhu9178/lit-review-6step.git
+git clone https://github.com/wakawaka66614/lit-review-6step.git
 cd lit-review-6step
 ./install.sh /path/to/your/project --with-deps
 ```

@@ -6,7 +6,7 @@ Break a literature review into six checkable stages: **question → search strat
 
 A skill pack in [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) format. Plain Markdown, no runtime dependencies.
 
-Author: 武文政 (Wu Wenzheng) · [@aaawuhu9178](https://github.com/aaawuhu9178)
+Author: 武文政 (Wu Wenzheng) · [@wakawaka66614](https://github.com/wakawaka66614)
 
 > The skill instructions themselves are currently written in Chinese. The workflow is usable by non-Chinese readers, but expect Chinese text inside `SKILL.md` files.
 
@@ -39,7 +39,7 @@ Requires DSH or any other agent that reads `SKILL.md` (e.g. Claude Code).
 **Windows**
 
 ```powershell
-git clone https://github.com/aaawuhu9178/lit-review-6step.git
+git clone https://github.com/wakawaka66614/lit-review-6step.git
 cd lit-review-6step
 .\install.ps1 -Target C:\path\to\your\project -WithDeps
 ```
@@ -53,7 +53,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1 -Target C:\path\to\your\p
 **macOS / Linux**
 
 ```bash
-git clone https://github.com/aaawuhu9178/lit-review-6step.git
+git clone https://github.com/wakawaka66614/lit-review-6step.git
 cd lit-review-6step
 ./install.sh /path/to/your/project --with-deps
 ```

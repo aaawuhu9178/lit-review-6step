@@ -26,7 +26,7 @@
 ## 复现步骤
 
 ```powershell
-git clone https://github.com/aaawuhu9178/lit-review-6step.git
+git clone https://github.com/wakawaka66614/lit-review-6step.git
 cd lit-review-6step
 .\install.ps1 -Target C:\tmp\lr-test -WithDeps
 Test-Path C:\tmp\lr-test\.dsh\skills\lit-review-6step\SKILL.md

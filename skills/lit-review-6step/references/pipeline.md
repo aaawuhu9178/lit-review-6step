@@ -132,8 +132,13 @@
 2. 列聚成 3–7 个主题；每组写"一致在哪 / 分歧为何 / 适用边界 / 方法演变"。
 3. 冲突地图：把结论相反的组单列，标差异来源（样本、测量、情境、时间）。
 4. 逐段写作：每段先给判断，再给证据；结尾 gap 段逐条挂回 RQ。
+5. **出图**：提纲里的图表计划逐张交给 `nature-figure`（读 `.dsh/skills/nature-figure/SKILL.md`）：
+   - 数据图 / 对比图 → Python 或 R 绘图后端（matplotlib / ggplot2），输出矢量 PDF + SVG；
+   - 结构图 / taxonomy 总图 / 框架图 → 矢量示意图路线（SVG），或 Mermaid 生成骨架再精修；
+   - 交付前跑它自带的 `scripts/audit_svg_schematic.py` 或 `scripts/validate_figure.py`；
+   - 命名与存放：`04_综合/figures/Fig1_xxx.pdf|.svg|.png`，与提纲编号一一对应。
 
-**门禁**：每段至少 2 篇文献对撞；没有"作者 A 说…作者 B 说…"的流水账；每个 gap 能指到 RQ 的哪一句。
+**门禁**：每段至少 2 篇文献对撞；没有"作者 A 说…作者 B 说…"的流水账；每个 gap 能指到 RQ 的哪一句；图表计划里的每张图要么已出图、要么明确标"不画"并说明理由。
 
 ---
 

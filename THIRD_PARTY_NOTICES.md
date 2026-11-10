@@ -40,6 +40,14 @@
 - 用途：可选的文献检索通道
 - 本仓库不包含、不分发其代码；由用户在自己的 DSH 配置中启用并提供 API key
 
+### nature-figure（nature-skills）
+
+- 作者：Yuan1z0825
+- 地址：https://github.com/Yuan1z0825/nature-skills
+- 许可证：Apache-2.0
+- 用途：S5 图表落地——出图、审图、导出（数据图走 Python/R，结构图走矢量示意图）
+- 状态：可选依赖；本仓库不分发，用户自行安装到 `.dsh/skills/nature-figure/`
+
 ## 本仓库原创
 
 - `skills/lit-review-6step/`

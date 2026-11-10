@@ -89,6 +89,7 @@ Seven checks: catalog matches directories, frontmatter complete, referenced path
 | [StarTower suite](https://github.com/xingtaxueshu/literature-review-skills) (MIT) | Strongly recommended | S1 question refinement, S5 contradiction mapping | `-WithDeps` clones it |
 | `sr-screener` | Optional | S3 blinded screening for systematic reviews | Install separately |
 | `academic-paper` | Optional | S6 citation / format checks | Install separately |
+| [nature-figure](https://github.com/Yuan1z0825/nature-skills) (Apache-2.0) | Optional | S5 figure rendering, auditing, export | Install into `.dsh/skills/nature-figure/` |
 | AMiner MCP | Optional | S3 machine search channel | See `skills/lit-review-6step/references/aminer.md` |
 
 If YAN or StarTower is missing, the orchestrator stops at preflight and tells you — it will not pretend to have read them.

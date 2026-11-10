@@ -87,6 +87,7 @@ node scripts/check.mjs
 | [星塔五件套](https://github.com/xingtaxueshu/literature-review-skills)（MIT） | 强烈建议 | S1 选题、S5 冲突梳理 | `-WithDeps` 自动 clone |
 | `sr-screener` | 可选 | S3 系统综述双盲筛选 | 自行安装 |
 | `academic-paper` | 可选 | S6 引用 / 格式核查 | 自行安装 |
+| [nature-figure](https://github.com/Yuan1z0825/nature-skills)（Apache-2.0） | 可选 | S5 出图、审图、导出 | 自行安装到 `.dsh/skills/nature-figure/` |
 | AMiner MCP | 可选 | S3 机器检索通道 | 见 `skills/lit-review-6step/references/aminer.md` |
 
 缺 YAN / 星塔时，编排器会在预检阶段停下并提示，不会假装读过。

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.0 — 2026-11-10
+
+- 接入 `nature-figure`（可选依赖，Apache-2.0）到 S5：图表计划逐张落地，数据图走 Python/R 后端，结构图走矢量示意图，交付前跑自带 audit
+- 出图统一存 `04_综合/figures/`，命名 `Fig1_xxx.pdf/.svg/.png`
+- S5 门禁增加"图表计划里的每张图要么出图、要么注明不画"
+- README、THIRD_PARTY_NOTICES、catalog 同步更新
+
 ## 1.1.0 — 2026-11-09
 
 - 新增 `commands/` 四个入口命令：`lit-review`、`lit-review-s2`、`survey-outline`、`survey-abstract`

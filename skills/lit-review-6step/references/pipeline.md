@@ -56,6 +56,23 @@
 
 ---
 
+## 每阶段结束：导师审查
+
+进下一阶段前先跑 **MR**（规则见 `references/mentor-review.md`）：对照 `00_选题/主题契约.md`，只判断"还在回答同一个问题吗"。PASS 后再看本文件对应阶段的门禁。
+
+| 阶段 | MR 只查 |
+|---|---|
+| S1 | 缺口是否支撑 RQ、模块是否都在范围内 |
+| S2 | 概念块是否覆盖对象/机制/边界，有没有范围外概念 |
+| S3 | 纳入文献是否服务 RQ，E1 是否被滥用 |
+| S4 | relevance 能否指回章节 |
+| S5 | taxonomy 是否回答 RQ、章节是否一一对应、有没有新增问题 |
+| S6 | 终稿与摘要是否回答 RQ、结论是否超出证据 |
+
+WARN 记录进 `00_选题/导师审查.md`；BLOCK 退回上一阶段，不靠写作补。
+
+---
+
 ## S1 选题：从研究不足到研究问题
 
 **读**：`literature-review-skills/skills/refine-literature-question/SKILL.md`、`.../locate-review-research-gap/SKILL.md`

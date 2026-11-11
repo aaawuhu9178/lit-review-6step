@@ -17,6 +17,7 @@ Author: 武文政 (Wu Wenzheng) · [@wakawaka66614](https://github.com/wakawaka6
 | The review reads like a stack of paper summaries | Concept matrix (rows = papers, columns = concepts) + contradiction map |
 | Search is incomplete and undocumented | Search strategy table + search log + PRISMA counts |
 | Structure drifts while writing | Fill the outline first (two taxonomies + cross matrix), then write |
+| Drifting away from the topic | Topic contract + a mentor review (MR) at every stage gate |
 | Skipping stages breaks the ending | Entry contracts + recorded debt, paid back at S5/S6 |
 
 ## What's inside

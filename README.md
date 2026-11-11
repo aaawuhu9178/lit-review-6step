@@ -22,13 +22,13 @@
 
 | 目录 | 内容 |
 |---|---|
-| `skills/lit-review-6step/` | 六步编排器：入口选择、门禁、AMiner 通道、结构模式与提纲模板 |
+| `skills/lit-review-6step/` | 六步编排器：入口选择、门禁、AMiner 通道、结构模式与提纲模板、导师审查（MR）与主题契约 |
 | `skills/survey-writing/` | 综述正文：物种选择、taxonomy、图表规划、Gate A/B/C、CR-S / HLA-S 审校模型 |
 | `skills/survey-abstract/` | 摘要五段式（钩子 → 定位 → 框架 → 证据 → 展望） |
 | `skills/shared/evidence-norms.md` | 三个 skill 共用的证据与语言规范 |
-| `commands/` | 四个入口命令：`lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` |
+| `commands/` | 五个命令：`lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` / `mentor-check` |
 | `scripts/check.mjs` | 仓库自检：frontmatter、引用路径、个人路径、密钥 |
-| `templates/文献综述项目模板/` | 六步目录 + 四张表 + 提纲 / 摘要模板 |
+| `templates/文献综述项目模板/` | 六步目录 + 四张表 + 主题契约 / 提纲 / 审校记录 / 摘要模板 |
 | `docs/workflow.md` | 流程说明、入口契约、结构模式 |
 
 ## 安装
@@ -114,6 +114,7 @@ node scripts/check.mjs
 | `/lit-review-s2` | 已有题目，从 S2 检索策略开始 |
 | `/survey-outline` | 只出「新技术 × 旧问题」提纲，不写正文 |
 | `/survey-abstract` | 只写或改摘要 |
+| `/mentor-check` | 跑一次导师审查，看当前阶段有没有跑题 |
 
 Claude Code 把 `commands/*.md` 放到 `.claude/commands/`，之后可直接输入 `/lit-review-s2 题目：……`。DSH 用户说“读 `commands/lit-review-s2.md` 并执行”，安装脚本也会把它复制到 `.dsh/commands/`。
 
@@ -127,6 +128,20 @@ Claude Code 把 `commands/*.md` 放到 `.claude/commands/`，之后可直接输�
 | S4 精读提取 | 提取表 + 笔记 | 纳入文献 100% 有行，局限非空 |
 | S5 综合写作 | 概念矩阵 + 冲突地图 + 提纲 + 初稿 | taxonomy 过十篇盲测，每段 ≥2 篇对撞 |
 | S6 统稿 | 终稿 + 摘要 + 自检清单 | 引用可回溯，格式统一，摘要承诺兑现 |
+
+每个阶段门禁前先跑**导师审查（MR）**：对照 `00_选题/主题契约.md`，只判断“还在回答同一个问题吗”。
+
+## 三道审查
+
+| 模型 | 管什么 | 什么时候跑 | 产出 |
+|---|---|---|---|
+| **MR 导师审查** | 是否还在回答用户的问题（对照主题契约） | 每个阶段门禁前 | PASS / WARN / BLOCK |
+| **CR-S 结构-逻辑审查** | 七节骨架、章节映射、论证链、防御性语言 | 每章写完、摘要定稿前 | P0/P1 问题表，每节 ≤5 条 |
+| **HLA-S 人类语言对齐** | 章际承接、段落节奏、术语一致、AI 腔 | CR-S 通过后 | 原文 → 改写，3–5 处 |
+
+顺序固定：**MR → CR-S → HLA-S**。先确认没跑题，再看结构，最后顺语言。
+
+三者都是只读角色、不改稿；记录分别写进 `00_选题/导师审查.md` 和 `05_成稿/审校记录.md`。规则见 `skills/lit-review-6step/references/mentor-review.md` 与 `skills/survey-writing/references/review-and-alignment.md`。
 
 ## 成稿骨架（结构模式一：新技术 × 旧问题）
 
@@ -170,6 +185,7 @@ lit-review-6step/
 - 引用核查依赖可选的 `academic-paper`；没装时只能按清单人工核对。
 - 仓库不包含任何第三方 skill 源码，第三方由安装脚本在用户本机下载。
 - 结构模式目前只有「新技术 × 旧问题」一种，`references/survey-structure.md` 预留了扩展位。
+- 三道审查（MR / CR-S / HLA-S）由同一个模型换角色扮演，能降低跑偏和自我辩护，**不保证发现所有问题**；关键节点仍需人工确认。
 
 ## 许可证
 

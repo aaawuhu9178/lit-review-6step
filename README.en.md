@@ -24,13 +24,13 @@ Author: 武文政 (Wu Wenzheng) · [@wakawaka66614](https://github.com/wakawaka6
 
 | Path | Content |
 |---|---|
-| `skills/lit-review-6step/` | Six-stage orchestrator: entry points, gates, AMiner channel, structure patterns and outline templates |
+| `skills/lit-review-6step/` | Six-stage orchestrator: entry points, gates, AMiner channel, structure patterns and outline templates, mentor review (MR) with topic contract |
 | `skills/survey-writing/` | Survey body: choosing the review species, taxonomy, figures, Gates A/B/C, CR-S / HLA-S review models |
 | `skills/survey-abstract/` | Five-part abstract (hook → positioning → framework → evidence → outlook) |
 | `skills/shared/evidence-norms.md` | Shared evidence and language rules for all three skills |
-| `commands/` | Four entry commands: `lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` |
+| `commands/` | Five commands: `lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` / `mentor-check` |
 | `scripts/check.mjs` | Repo self-check: frontmatter, referenced paths, personal paths, secrets |
-| `templates/文献综述项目模板/` | Six-stage folder layout, four tables, outline and abstract templates |
+| `templates/文献综述项目模板/` | Six-stage folder layout, four tables, topic contract / outline / review log / abstract templates |
 | `docs/workflow.md` | Workflow overview, entry contracts, structure pattern |
 
 ## Install
@@ -116,6 +116,7 @@ You do not have to start at S1. Tell the agent what you already have:
 | `/lit-review-s2` | Start at S2 with a fixed topic |
 | `/survey-outline` | Produce the "new technology × old problem" outline only |
 | `/survey-abstract` | Write or revise the abstract only |
+| `/mentor-check` | Run a mentor review to check whether the current stage has drifted |
 
 In Claude Code, copy `commands/*.md` into `.claude/commands/` and run `/lit-review-s2 topic: ...`. In DSH, say "execute `commands/lit-review-s2.md`"; the installer also copies them to `.dsh/commands/`.
 
@@ -129,6 +130,20 @@ In Claude Code, copy `commands/*.md` into `.claude/commands/` and run `/lit-revi
 | S4 Close reading | Extraction table + notes | 100% of included papers have a row; limitations filled |
 | S5 Synthesis | Concept matrix + contradiction map + outline + draft | Taxonomy passes the ten-paper blind test; every section contrasts ≥2 papers |
 | S6 Final editing | Manuscript + abstract + checklist | Citations traceable, format consistent, abstract promises fulfilled |
+
+Every stage gate starts with a **mentor review (MR)**: compare against `00_选题/主题契约.md` and ask only "are we still answering the same question?".
+
+## Three reviews
+
+| Model | What it checks | When | Output |
+|---|---|---|---|
+| **MR Mentor review** | Whether the work still answers the user's question (against the topic contract) | Before every stage gate | PASS / WARN / BLOCK |
+| **CR-S Structure & logic** | Seven-section skeleton, chapter mapping, argument chain, defensive language | After each chapter, before the abstract is final | P0/P1 issue table, ≤5 per section |
+| **HLA-S Human language alignment** | Cross-chapter transitions, rhythm, terminology, AI tone | After CR-S passes | Original → rewrite, 3–5 spots |
+
+Fixed order: **MR → CR-S → HLA-S**. First confirm it is still on topic, then structure, then language.
+
+All three are read-only roles that never rewrite the draft; results go to `00_选题/导师审查.md` and `05_成稿/审校记录.md`. Rules: `skills/lit-review-6step/references/mentor-review.md` and `skills/survey-writing/references/review-and-alignment.md`.
 
 ## Manuscript outline (pattern 1: new technology × old problem)
 
@@ -172,6 +187,7 @@ lit-review-6step/
 - Citation checking depends on the optional `academic-paper`; without it, verification is manual.
 - The repository bundles no third-party skill code; the installer fetches MIT dependencies on the user's machine.
 - Only one structure pattern ("new technology × old problem") is implemented. `references/survey-structure.md` has room for more.
+- The three reviews (MR / CR-S / HLA-S) are the same model in different roles. They reduce drift and self-justification but **cannot catch every problem**; check the contract yourself at key points.
 - Skill instructions are in Chinese.
 
 ## License

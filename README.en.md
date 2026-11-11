@@ -24,7 +24,7 @@ Author: 武文政 (Wu Wenzheng) · [@wakawaka66614](https://github.com/wakawaka6
 | Path | Content |
 |---|---|
 | `skills/lit-review-6step/` | Six-stage orchestrator: entry points, gates, AMiner channel, structure patterns and outline templates |
-| `skills/survey-writing/` | Survey body: choosing the review species, taxonomy, figures, Gates A/B/C |
+| `skills/survey-writing/` | Survey body: choosing the review species, taxonomy, figures, Gates A/B/C, CR-S / HLA-S review models |
 | `skills/survey-abstract/` | Five-part abstract (hook → positioning → framework → evidence → outlook) |
 | `skills/shared/evidence-norms.md` | Shared evidence and language rules for all three skills |
 | `commands/` | Four entry commands: `lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` |

@@ -22,7 +22,7 @@
 | 目录 | 内容 |
 |---|---|
 | `skills/lit-review-6step/` | 六步编排器：入口选择、门禁、AMiner 通道、结构模式与提纲模板 |
-| `skills/survey-writing/` | 综述正文：物种选择、taxonomy、图表规划、Gate A/B/C |
+| `skills/survey-writing/` | 综述正文：物种选择、taxonomy、图表规划、Gate A/B/C、CR-S / HLA-S 审校模型 |
 | `skills/survey-abstract/` | 摘要五段式（钩子 → 定位 → 框架 → 证据 → 展望） |
 | `skills/shared/evidence-norms.md` | 三个 skill 共用的证据与语言规范 |
 | `commands/` | 四个入口命令：`lit-review` / `lit-review-s2` / `survey-outline` / `survey-abstract` |

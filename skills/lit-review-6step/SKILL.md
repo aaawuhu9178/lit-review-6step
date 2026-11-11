@@ -67,12 +67,14 @@ S2 入口的 RQ 卡只要三行：题目、一句 RQ（对象 + 机制 + 边界�
 | S2 策略 | YAN `文献检索` | `01_检索/检索策略表.md`、`01_检索/检索日志.md` | 每个概念块有同义词；每行有库/检索式/限定/预计量；AMiner 预检有结论 |
 | S3 检索与初筛 | AMiner MCP（+ 手工库）+ `sr-screener` 或轻量筛选 | `01_检索/候选表.csv`、`02_筛选/筛选记录.md` | 候选表每条有 include/exclude + 排除码；PRISMA 计数闭合 |
 | S4 精读与提取 | YAN `文献精读` | `03_精读/提取表.csv`、`03_精读/notes/` | 纳入文献 100% 有提取行；局限列必填 |
-| S5 综合写作 | YAN `文献综述写作` + 星塔 `map-literature-contradictions` + `survey-writing` + `nature-figure` | `04_综合/概念矩阵.md`、`04_综合/冲突地图.md`、`04_综合/figures/`、`05_成稿/提纲.md`、`05_成稿/初稿.md` | 先定结构模式与提纲；taxonomy 过十篇盲测；每段 ≥2 篇对撞；每个 gap 挂到 RQ；图表计划逐张落地 |
-| S6 统稿与格式 | YAN `文献综述章节` + `survey-abstract` + `academic-paper`（citation-check） | `05_成稿/终稿.md`、`05_成稿/摘要.md`、`05_成稿/自检清单.md` | 引用 100% 可回溯；格式统一；摘要承诺逐条兑现；Boote & Beile 达线 |
+| S5 综合写作 | YAN `文献综述写作` + 星塔 `map-literature-contradictions` + `survey-writing`（含 CR-S / HLA-S）+ `nature-figure` | `04_综合/概念矩阵.md`、`04_综合/冲突地图.md`、`04_综合/figures/`、`05_成稿/提纲.md`、`05_成稿/初稿.md`、`05_成稿/审校记录.md` | 先定结构模式与提纲；taxonomy 过十篇盲测；每段 ≥2 篇对撞；每个 gap 挂到 RQ；图表计划逐张落地；每章过 CR-S / HLA-S |
+| S6 统稿与格式 | YAN `文献综述章节` + `survey-abstract` + `academic-paper`（citation-check） | `05_成稿/终稿.md`、`05_成稿/摘要.md`、`05_成稿/自检清单.md` | 引用 100% 可回溯；格式统一；摘要承诺逐条兑现；摘要过 CR-S；Boote & Beile 达线 |
 
 写整篇综述时（不是只写一节），S5 按**结构模式一「新技术 × 旧问题」**（当前唯一模式），见 `references/survey-structure.md`；按 `assets/survey-outline-pattern1.md` 填完提纲再动笔。摘要放 S6，用 `survey-abstract` 的五段式收口。
 
 图表在 S5 落地：提纲里的图表计划逐张交给 `nature-figure`——数据图走它的 Python/R 绘图后端，结构图与 taxonomy 走矢量示意图路线，交付前跑它自带的 audit 脚本。出图存 `04_综合/figures/`，命名 `Fig1_xxx.pdf` + `.svg` + `.png`。
+
+正文每写完一章，先过 **CR-S**（结构-逻辑审查：七节骨架、章节映射、论证链、防御性语言），再过 **HLA-S**（人类语言对齐：章际承接、段落节奏、术语一致、去 AI 腔）；摘要定稿前单独过 CR-S。规则见 `survey-writing/references/review-and-alignment.md`，结果记进 `05_成稿/审校记录.md`。
 
 阶段内的具体话术、字段定义和检查清单见 `references/pipeline.md`；检索通道细节见 `references/aminer.md`；成稿结构见 `references/survey-structure.md`。
 
@@ -92,6 +94,7 @@ S2 入口的 RQ 卡只要三行：题目、一句 RQ（对象 + 机制 + 边界�
 ├─ 04_综合/冲突地图.md
 └─ 05_成稿/提纲.md
    05_成稿/初稿.md
+   05_成稿/审校记录.md
    05_成稿/摘要.md
    05_成稿/终稿.md
    05_成稿/自检清单.md
